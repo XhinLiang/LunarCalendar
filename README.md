@@ -1,5 +1,4 @@
 # LunarCalendar
----
 **[中文看这里](https://github.com/XhinLiang/LunarCalendar/blob/master/README_Chinese.md)**
 
 ## Introduce

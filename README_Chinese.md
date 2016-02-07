@@ -1,7 +1,9 @@
 # LunarCalendar
----
+**[English](https://github.com/XhinLiang/LunarCalendar/blob/master/README_Chinese.md)**
+
 ## 介绍
 **一个能够简化农历和节日操作的库**
+
 **兼备易用与高效**
 
 ## 添加依赖
