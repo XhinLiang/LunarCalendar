@@ -6,7 +6,7 @@
 
 **兼备易用与高效**
 
-## 添加依赖
+## 导入
 
 ### Gradle
 **1. 在根目录的 build.gradle 添加**
@@ -76,7 +76,7 @@ for (LunarCalendar[] weeks : month) {
 
 ```
 
-## Usage
+## 使用
 - 在 **sample** 中找到示例代码
 - 在 **根目录** 找到 **JavaDoc**
 
