@@ -19,39 +19,39 @@ public class Main {
         // Month of Gregorian
         println("Month of Gregorian");
         LunarCalendar[][] month = LunarCalendar.getInstanceMonth(2016, 2);
-        for (LunarCalendar[] aMonth2 : month) {
-            for (LunarCalendar anAMonth2 : aMonth2) {
-                if (anAMonth2 == null) {
+        for (LunarCalendar[] weeks : month) {
+            for (LunarCalendar day : weeks) {
+                if (day == null) {
                     printSpaceX2();
                     continue;
                 }
-                print(String.format("%2d", anAMonth2.getDay()));
+                print(String.format("%2d", day.getDay()));
             }
             System.out.println();
         }
 
         // Month of Lunar
         println("Month of Lunar");
-        for (LunarCalendar[] aMonth1 : month) {
-            for (LunarCalendar anAMonth1 : aMonth1) {
-                if (anAMonth1 == null) {
+        for (LunarCalendar[] weeks : month) {
+            for (LunarCalendar day : weeks) {
+                if (day == null) {
                     printSpaceX3();
                     continue;
                 }
-                print(String.format("%s", anAMonth1.getLunarDay()));
+                print(String.format("%s", day.getLunarDay()));
             }
             System.out.println();
         }
 
         // SubTitle of Month
         println("SubTitle of Month");
-        for (LunarCalendar[] aMonth : month) {
-            for (LunarCalendar anAMonth : aMonth) {
-                if (anAMonth == null) {
+        for (LunarCalendar[] weeks : month) {
+            for (LunarCalendar day : weeks) {
+                if (day == null) {
                     printSpaceX3();
                     continue;
                 }
-                print(String.format("%s", anAMonth.getSubTitle()));
+                print(String.format("%s", day.getSubTitle()));
             }
             System.out.println();
         }

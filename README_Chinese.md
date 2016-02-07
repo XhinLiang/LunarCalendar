@@ -1,5 +1,5 @@
 # LunarCalendar
-**[English](https://github.com/XhinLiang/LunarCalendar/blob/master/README_Chinese.md)**
+**[English](https://github.com/XhinLiang/LunarCalendar)**
 
 ## 介绍
 **一个能够简化农历和节日操作的库**
@@ -60,10 +60,12 @@ System.out.println(lunarCalender.getLunar());
 
 - **获取一个月**
 ```
+// LunarCalender[6][7], 表示这个月的星期和星期里的天
+// 就像我们使用的月历一样
 LunarCalendar[][] month = LunarCalendar.getInstanceMonth(2016, 2);
-for (LunarCalendar[] aMonth2 : month) {
-    for (LunarCalendar anAMonth2 : aMonth2) {
-        if (anAMonth2 == null) {
+for (LunarCalendar[] weeks : month) {
+    for (LunarCalendar day : weeks) {
+        if (day == null) {
             printSpaceX2();
             continue;
         }
@@ -72,6 +74,7 @@ for (LunarCalendar[] aMonth2 : month) {
     System.out.println();
 }
 ```
+```
 
 ## Usage
 - 在 **sample** 中找到示例代码
@@ -79,7 +82,7 @@ for (LunarCalendar[] aMonth2 : month) {
 
 ## 更多
 - XhinLiang@gmail.com
-- [Blog](xhinliang.github.io)
+- [Blog](http://xhinliang.github.io)
 
 ## 感谢
 - [DatePicker](https://github.com/AigeStudio/DatePicker)

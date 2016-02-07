@@ -57,11 +57,14 @@ System.out.println(lunarCalender.getLunar());
 ```
 
 - **Obtain LunarCalender by month**
+
 ```
+// LunarCalender[6][7], means that the weeks of this month and the
+// days of the weeks.Just like the calendar which we use.
 LunarCalendar[][] month = LunarCalendar.getInstanceMonth(2016, 2);
-for (LunarCalendar[] aMonth2 : month) {
-    for (LunarCalendar anAMonth2 : aMonth2) {
-        if (anAMonth2 == null) {
+for (LunarCalendar[] weeks : month) {
+    for (LunarCalendar day : weeks) {
+        if (day == null) {
             printSpaceX2();
             continue;
         }
@@ -77,7 +80,7 @@ for (LunarCalendar[] aMonth2 : month) {
 
 ## More
 - XhinLiang@gmail.com
-- [Blog](xhinliang.github.io)
+- [Blog](http://xhinliang.github.io)
 
 ## Thanks
 - [DatePicker](https://github.com/AigeStudio/DatePicker)
