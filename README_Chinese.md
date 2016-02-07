@@ -79,7 +79,7 @@ for (LunarCalendar[] aMonth2 : month) {
 - XhinLiang@gmail.com
 - [Blog](xhinliang.github.io)
 
-## Thanks
+## 感谢
 - [DatePicker](https://github.com/AigeStudio/DatePicker)
 - [AigeStudio](http://blog.csdn.net/aigestudio)
 
