@@ -1,3 +1,4 @@
 rootProject.name = 'LunarCalendar'
 include 'sample'
+include 'library'
 
