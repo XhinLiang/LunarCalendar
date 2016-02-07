@@ -69,7 +69,7 @@ for (LunarCalendar[] weeks : month) {
             printSpaceX2();
             continue;
         }
-        print(String.format("%2d", anAMonth2.getDay()));
+        print(String.format("%2d", day.getDay()));
     }
     System.out.println();
 }
