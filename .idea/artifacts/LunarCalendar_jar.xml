@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="LunarCalendar:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/LunarCalendar_jar</output-path>
-    <root id="archive" name="LunarCalendar.jar">
-      <element id="module-output" name="LunarCalendar" />
-    </root>
-  </artifact>
-</component>
