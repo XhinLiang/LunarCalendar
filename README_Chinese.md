@@ -23,7 +23,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.XhinLiang:LunarCalendar:1.0.4'
+	compile 'com.github.XhinLiang:LunarCalendar:1.1.0'
 }
 ```
 ### Maven
@@ -42,12 +42,12 @@ dependencies {
 <dependency>
 	<groupId>com.github.XhinLiang</groupId>
 	<artifactId>LunarCalendar</artifactId>
-	<version>1.0.4</version>
+	<version>1.1.0</version>
 </dependency>
 ```
 
 ### Jar
-**1. 下载 [JAR](https://github.com/XhinLiang/LunarCalendar/releases/download/1.0.4/lunar_calender_1_0_4.jar) 文件**
+**1. 下载 [JAR](https://github.com/XhinLiang/LunarCalendar/releases/download/1.1.0/LunarCalendar-all-1.1.0.jar) 文件**
 
 **2. 添加依赖**
 
@@ -66,10 +66,10 @@ LunarCalendar[][] month = LunarCalendar.getInstanceMonth(2016, 2);
 for (LunarCalendar[] weeks : month) {
     for (LunarCalendar day : weeks) {
         if (day == null) {
-            printSpaceX2();
+            System.out.print('  ');
             continue;
         }
-        print(String.format("%2d", day.getDay()));
+        System.out.print(String.format("%2d", day.getDay()));
     }
     System.out.println();
 }
@@ -77,7 +77,7 @@ for (LunarCalendar[] weeks : month) {
 ```
 
 ## 使用
-- 在 **sample** 中找到示例代码
+- 在 **Main** 中找到示例代码
 - 在 **根目录** 找到 **JavaDoc**
 
 ## 更多
@@ -90,7 +90,7 @@ for (LunarCalendar[] weeks : month) {
 
 ## License
 
-    Copyright 2015 XhinLiang
+    Copyright 2016 XhinLiang
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
