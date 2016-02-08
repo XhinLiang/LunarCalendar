@@ -1,7 +1,8 @@
-group 'io.github.xhinliang'
+group 'com.github.xhinliang'
 version '1.1.0'
 
 apply plugin: 'java'
+apply plugin: 'maven'
 apply plugin: 'application'
 
 sourceCompatibility = 1.6
@@ -18,7 +19,7 @@ dependencies {
 //create a single Jar with all dependencies
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Implementation-Title': 'Gradle Jar File Example',
+        attributes 'Implementation-Title': 'Export',
                 'Implementation-Version': version,
                 'Main-Class': 'io.github.xhinliang.lunarcalendar.Main'
     }
