@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3493ad02-9923-482e-8215-10641e70eb60" name="Default" comment="" />
+    <list default="true" id="3493ad02-9923-482e-8215-10641e70eb60" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="LunarCalendar.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1348,12 +1350,12 @@
       <workItem from="1454851838282" duration="28000" />
       <workItem from="1454885568591" duration="1203000" />
       <workItem from="1454902090179" duration="1315000" />
-      <workItem from="1454903465234" duration="7217000" />
+      <workItem from="1454903465234" duration="7373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15902000" />
+    <option name="totallyTimeSpent" value="16058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
