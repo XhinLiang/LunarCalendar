@@ -77,7 +77,7 @@ for (LunarCalendar[] weeks : month) {
 ```
 
 ## Usage
-- View the sample in module **sample**
+- View the sample in **Main**
 - View the doc in **root**
 
 ## More
