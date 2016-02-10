@@ -11,6 +11,7 @@ public class Main {
         println("Basic");
         LunarCalendar lunarCalender = LunarCalendar.getInstance(2016, 2, 8);
         System.out.println(lunarCalender.getLunar());
+        System.out.println(lunarCalender.getFullLunarStr());
         println();
 
         // Month of Gregorian
@@ -56,7 +57,6 @@ public class Main {
         // Festival
         println("Festival");
         LunarCalendar festivalDay = LunarCalendar.getInstance(2016, 10, 1);
-        //noinspection Convert2streamapi
         for (String festival : festivalDay.getFestivals().getSet())
             print(festival);
         println();

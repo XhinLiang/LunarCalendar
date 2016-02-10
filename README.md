@@ -52,20 +52,29 @@ dependencies {
 **2. Add Dependency.**
 
 ## Sample
-- **Obtain LunarCalender by single day**
+
+#### obtain single day
+- **Code**
 ```
 LunarCalendar lunarCalender = LunarCalendar.getInstance(2016, 2, 8);
 System.out.println(lunarCalender.getLunar());
+System.out.println(lunarCalender.getLunar());
+```
+- **Output**
+```
+Basic
+Lunar{year=2016, month=1, day=1}
+二零一六年正月初一
 ```
 
-- **Obtain LunarCalender by month**
-
+#### obtain a month by weeks
+- **Code**
 ```
-// LunarCalender[6][7], means that the weeks of this month and the
-// days of the weeks.Just like the calendar which we use.
+// LunarCalender[6][7], means the weeks of this month and the days of the weeks
+// Just like the calender we use daily.
 LunarCalendar[][] month = LunarCalendar.getInstanceMonth(2016, 2);
-for (LunarCalendar[] weeks : month) {
-    for (LunarCalendar day : weeks) {
+for (LunarCalendar[] week : month) {
+    for (LunarCalendar day : week) {
         if (day == null) {
             System.out.print('  ');
             continue;
@@ -75,6 +84,16 @@ for (LunarCalendar[] weeks : month) {
     System.out.println();
 }
 ```
+- **Output**
+```
+Month of Lunar
+    廿三 廿四 廿五 廿六 廿七 廿八
+廿九 初一 初二 初三 初四 初五 初六
+初七 初八 初九 初十 十一 十二 十三
+十四 十五 十六 十七 十八 十九 廿十
+廿一 廿二
+```
+
 
 ## Usage
 - View the sample in **Main**
