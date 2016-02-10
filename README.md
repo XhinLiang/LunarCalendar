@@ -58,7 +58,7 @@ dependencies {
 ```
 LunarCalendar lunarCalender = LunarCalendar.getInstance(2016, 2, 8);
 System.out.println(lunarCalender.getLunar());
-System.out.println(lunarCalender.getLunar());
+System.out.println(lunarCalender.getFullLunarStr());
 ```
 - **Output**
 ```
