@@ -62,7 +62,6 @@ System.out.println(lunarCalender.getFullLunarStr());
 ```
 - **Output**
 ```
-Basic
 Lunar{year=2016, month=1, day=1}
 二零一六年正月初一
 ```
@@ -79,14 +78,13 @@ for (LunarCalendar[] week : month) {
             System.out.print('  ');
             continue;
         }
-        System.out.print(String.format("%2d", day.getDay()));
+        System.out.println(String.format("%s", day.getLunarDay()));
     }
     System.out.println();
 }
 ```
 - **Output**
 ```
-Month of Lunar
     廿三 廿四 廿五 廿六 廿七 廿八
 廿九 初一 初二 初三 初四 初五 初六
 初七 初八 初九 初十 十一 十二 十三
