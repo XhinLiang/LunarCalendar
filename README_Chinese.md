@@ -79,7 +79,7 @@ for (LunarCalendar[] week : month) {
             System.out.print('  ');
             continue;
         }
-        System.out.print(String.format("%2d", day.getDay()));
+        System.out.println(String.format("%s", day.getLunarDay()));
     }
     System.out.println();
 }
