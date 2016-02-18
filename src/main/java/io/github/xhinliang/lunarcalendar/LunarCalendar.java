@@ -3,6 +3,10 @@ package io.github.xhinliang.lunarcalendar;
 
 import io.github.xhinliang.lunarcalendar.utils.TextUtils;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 /**
  * 日历数据实体
  * 封装日历绘制时需要的数据
@@ -62,6 +66,15 @@ public class LunarCalendar {
         return solarTerm;
     }
 
+    public Date getDate() {
+        Calendar calendar = new GregorianCalendar(year, month - 1, day);
+        return calendar.getTime();
+    }
+
+    public long getMillis() {
+        return getDate().getTime();
+    }
+
     /**
      * 获取指定年月的日历对象数组
      *
@@ -72,6 +85,7 @@ public class LunarCalendar {
     public static LunarCalendar[][] getInstanceMonth(int year, int month) {
         return DPCManager.getInstance().obtainDPInfo(year, month);
     }
+
 
     public boolean isWeekend() {
         return isWeekend;
@@ -119,10 +133,10 @@ public class LunarCalendar {
         return String.format("%s年%s月%s", getLunarYear(), getLunarMonth(), getLunarDay());
     }
 
-    public String getSubTitle(){
+    public String getSubTitle() {
         if (!festivals.getSet().isEmpty())
             return festivals.getSet().iterator().next();
-        if (solarTerm !=null)
+        if (solarTerm != null)
             return solarTerm;
         return getLunarDay();
     }
