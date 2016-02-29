@@ -3,13 +3,13 @@ package io.github.xhinliang.lunarcalendar;
 /**
  * Sample for Usage
  *
- * @author XhinLiang 2016-02-06
+ * @author XhinLiang 2016-02-06世界湿地日
  */
 public class Main {
     public static void main(String[] args) {
         // Basic
         println("Basic");
-        LunarCalendar lunarCalender = LunarCalendar.getInstance(2016, 2, 8);
+        LunarCalendar lunarCalender = LunarCalendar.getInstance(2016, 1, 4);
         System.out.println(lunarCalender.getLunar());
         System.out.println(lunarCalender.getFullLunarStr());
         println();
