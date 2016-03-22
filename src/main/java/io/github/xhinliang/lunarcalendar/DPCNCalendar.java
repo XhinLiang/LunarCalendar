@@ -197,11 +197,11 @@ class DPCNCalendar {
             tmp = mSolarTerm.buildSolarTerm(year);
             CACHE_SOLAR_TERM.put(year, tmp);
         }
-        String[] STOfMonth = tmp[month - 1];
-        if (Integer.valueOf(STOfMonth[0]) == day) {
+        String[] stOfMonth = tmp[month - 1];
+        if (Integer.valueOf(stOfMonth[0]) == day) {
             return SOLAR_TERM[month - 1][0];
         }
-        if (Integer.valueOf(STOfMonth[1]) == day) {
+        if (Integer.valueOf(stOfMonth[1]) == day) {
             return SOLAR_TERM[month - 1][1];
         }
         return null;
