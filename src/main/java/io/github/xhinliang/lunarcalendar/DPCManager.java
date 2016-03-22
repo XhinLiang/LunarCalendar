@@ -53,7 +53,7 @@ import java.util.Set;
         if (null == dataOfYear)
             dataOfYear = new HashMap<Integer, LunarCalendar[][]>();
         LunarCalendar[][] dataOfMonth = buildDPInfo(year, month);
-        dataOfYear.put((month), dataOfMonth);
+        dataOfYear.put(month, dataOfMonth);
         DATE_CACHE.put(year, dataOfYear);
         return dataOfMonth;
     }

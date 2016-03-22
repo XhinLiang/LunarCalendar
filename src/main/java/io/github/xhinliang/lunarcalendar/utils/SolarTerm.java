@@ -93,7 +93,7 @@ public final class SolarTerm {
         double jd = 365.2422 * (year - 2000), q;
         int j;
         for (int i = 0; i < tmp.length; i++) {
-            j = (i - 5);
+            j = i - 5;
             q = angleCal(jd + j * 15.2, j * 15, 0);
             q = q + J2000 + (double) 8 / 24;
             setFromJD(q, true);

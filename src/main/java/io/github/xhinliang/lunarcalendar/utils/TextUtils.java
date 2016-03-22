@@ -6,6 +6,9 @@ package io.github.xhinliang.lunarcalendar.utils;
  * @author XhinLiang 2016-02-06
  */
 public class TextUtils {
+
+    private TextUtils() {}
+
     private static final String[] LUNAR_HEADER = {"初", "十", "廿", "卅", "正", "腊", "冬", "闰"};
     private static final String[] NUMBER_CAPITAL = {"零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"};
 
