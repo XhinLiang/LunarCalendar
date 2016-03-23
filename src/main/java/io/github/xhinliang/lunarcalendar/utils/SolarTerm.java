@@ -102,23 +102,23 @@ public final class SolarTerm {
         return TextUtils.arraysConvert(tmp, 2);
     }
 
-    private void setFromJD(double jd, boolean UTC) {
-        if (UTC)
+    private void setFromJD(double jd, boolean utc) {
+        if (utc)
             jd -= this.deltaT2(jd - J2000);
         jd += 0.5;
 
-        double A = int2(jd);
-        double D;
+        double a = int2(jd);
+        double d;
 
-        if (A > 2299161) {
-            D = int2((A - 1867216.25) / 36524.25);
-            A += 1 + D - int2(D / 4);
+        if (a > 2299161) {
+            d = int2((a - 1867216.25) / 36524.25);
+            a += 1 + d - int2(d / 4);
         }
-        A += 1524;
-        double y = int2((A - 122.1) / 365.25);
-        D = A - int2(365.25 * y);
-        double m = int2(D / 30.6001);
-        this.D = D - int2(m * 30.6001);
+        a += 1524;
+        double y = int2((a - 122.1) / 365.25);
+        d = a - int2(365.25 * y);
+        double m = int2(d / 30.6001);
+        this.D = d - int2(m * 30.6001);
         y -= 4716;
         m--;
         if (m > 12)
@@ -217,10 +217,10 @@ public final class SolarTerm {
         zb[0] = rad2mrad(zb[0] + (v + 2.9965 * t1) / rad);
     }
 
-    private double Mnn(double[] F) {
+    private double Mnn(double[] f) {
         double v = 0, t1 = MnnT, t2 = t1 * t1, t3 = t2 * t1, t4 = t3 * t1;
-        for (int i = 0; i < F.length; i += 6)
-            v += F[i] * Math.sin(F[i + 1] + t1 * F[i + 2] + t2 * F[i + 3] + t3 * F[i + 4] + t4 * F[i + 5]);
+        for (int i = 0; i < f.length; i += 6)
+            v += f[i] * Math.sin(f[i + 1] + t1 * f[i + 2] + t2 * f[i + 3] + t3 * f[i + 4] + t4 * f[i + 5]);
         return v;
     }
 
@@ -245,10 +245,10 @@ public final class SolarTerm {
         double t2 = t1 * t1;
         double t3 = t2 * t1;
         double t4 = t3 * t1;
-        double L = GXC_l[0] + GXC_l[1] * t1 + GXC_l[2] * t2 + GXC_l[3] * t3 + GXC_l[4] * t4;
+        double l = GXC_l[0] + GXC_l[1] * t1 + GXC_l[2] * t2 + GXC_l[3] * t3 + GXC_l[4] * t4;
         double p = GXC_p[0] + GXC_p[1] * t1 + GXC_p[2] * t2;
         double e = GXC_e[0] + GXC_e[1] * t1 + GXC_e[2] * t2;
-        double dL = L - zb[0], dP = p - zb[0];
+        double dL = l - zb[0], dP = p - zb[0];
         zb[0] -= GXC_k * (Math.cos(dL) - e * Math.cos(dP)) / Math.cos(zb[1]);
         zb[1] -= GXC_k * Math.sin(zb[1]) * (Math.sin(dL) - e * Math.sin(dP));
         zb[0] = rad2mrad(zb[0]);
@@ -272,10 +272,10 @@ public final class SolarTerm {
         return v;
     }
 
-    private double Enn(double[] F) {
+    private double Enn(double[] f) {
         double v = 0;
-        for (int i = 0; i < F.length; i += 3)
-            v += F[i] * Math.cos(F[i + 1] + EnnT * F[i + 2]);
+        for (int i = 0; i < f.length; i += 3)
+            v += f[i] * Math.cos(f[i + 1] + EnnT * f[i + 2]);
         return v;
     }
 }
