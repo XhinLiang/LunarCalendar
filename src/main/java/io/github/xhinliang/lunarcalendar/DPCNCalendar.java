@@ -82,7 +82,7 @@ class DPCNCalendar {
             {},
             {8, 24}};
 
-    private static final String SOLAR_TERM[][] = {
+    private static final String[][] SOLAR_TERM = {
             {"小寒", "大寒"},
             {"立春", "雨水"},
             {"惊蛰", "春分"},
@@ -320,7 +320,7 @@ class DPCNCalendar {
      */
     static int[][] buildMonthGregorian(int year, int month) {
         calendar.clear();
-        int tmp[][] = new int[6][7];
+        int[][] tmp = new int[6][7];
         //Calender.January = 0
         //noinspection MagicConstant
         calendar.set(year, month - 1, 1);
