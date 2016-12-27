@@ -1,12 +1,12 @@
 group 'com.github.xhinliang'
-version '1.2.3'
+version '1.2.5'
 
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'application'
 
-sourceCompatibility = '1.6'
-targetCompatibility = '1.6'
+sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
 
 mainClassName = 'io.github.xhinliang.lunarcalendar.Main'
 
