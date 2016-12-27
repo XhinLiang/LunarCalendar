@@ -56,7 +56,7 @@ public class LunarCalendar {
     }
 
     public Festivals getFestivals() {
-        if (festivals == null) {
+        if (festivals.getSet().isEmpty()) {
             festivals = DPCNCalendar.buildDayFestivals(year, month, day);
         }
         return festivals;
