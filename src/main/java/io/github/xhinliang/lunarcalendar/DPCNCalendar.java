@@ -147,10 +147,10 @@ class DPCNCalendar {
                     tmp[i][j].add(result);
                 }
                 // 二十四节气
-//                result = getSolarTerm(year, month, gregorian.day);
-//                if (!TextUtils.isEmpty(result)) {
-//                    tmp[i][j].add(result);
-//                }
+                result = getSolarTerm(year, month, gregorian.day);
+                if (!TextUtils.isEmpty(result)) {
+                    tmp[i][j].add(result);
+                }
             }
         }
         return tmp;
