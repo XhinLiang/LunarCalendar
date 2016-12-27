@@ -12,6 +12,8 @@ mainClassName = 'io.github.xhinliang.lunarcalendar.Main'
 
 repositories {
     mavenCentral()
+    jcenter()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
