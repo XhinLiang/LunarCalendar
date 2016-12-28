@@ -1,4 +1,4 @@
-package io.github.xhinliang.lunarcalendar;
+﻿package io.github.xhinliang.lunarcalendar;
 
 
 import io.github.xhinliang.lunarcalendar.utils.TextUtils;
@@ -56,7 +56,7 @@ public class LunarCalendar {
     }
 
     public Festivals getFestivals() {
-        if (festivals.getSet().isEmpty()) {
+        if (festivals == null) {
             festivals = DPCNCalendar.buildDayFestivals(year, month, day);
         }
         return festivals;
