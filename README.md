@@ -26,7 +26,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.XhinLiang:LunarCalendar:1.2.2'
+	compile 'com.github.XhinLiang:LunarCalendar:3.0.0'
 }
 ```
 ### Maven
@@ -45,12 +45,12 @@ dependencies {
 <dependency>
 	<groupId>com.github.XhinLiang</groupId>
 	<artifactId>LunarCalendar</artifactId>
-	<version>1.2.2</version>
+	<version>3.0.0</version>
 </dependency>
 ```
 
 ### Jar
-**1. Download the [JAR](https://github.com/XhinLiang/LunarCalendar/releases/download/1.2.2/LunarCalendar-all-1.2.2.jar).**
+**1. Download the [JAR](https://github.com/XhinLiang/LunarCalendar/releases/download/3.0.0/LunarCalendar-3.0.jar).**
 
 **2. Add Dependency.**
 
