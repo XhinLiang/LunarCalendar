@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: Export
-Implementation-Version: 1.2.2
-Main-Class: io.github.xhinliang.lunarcalendar.Main
-
