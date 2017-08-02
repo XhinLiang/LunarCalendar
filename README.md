@@ -1,6 +1,6 @@
 # LunarCalendar
 [![Release](https://jitpack.io/v/XhinLiang/LunarCalendar.svg)](https://jitpack.io/#XhinLiang/LunarCalendar)
-[![Release](https://img.shields.io/github/release/XhinLiang/LunarCalendar.svg?label=maven version)](https://jitpack.io/#XhinLiang/LunarCalendar)
+[![Release](https://img.shields.io/github/release/XhinLiang/LunarCalendar.svg)](https://jitpack.io/#XhinLiang/LunarCalendar)
 
 **[中文](https://github.com/XhinLiang/LunarCalendar/blob/master/README_Chinese.md)**
 
