@@ -1,9 +1,7 @@
 package com.xhinliang.lunarcalendar;
 
 /**
- * Created by io.xhinliang on 16-2-6.
- *
- * @author XhinLiang 2016-02-06
+ * @author xhinliang
  */
 @SuppressWarnings("WeakerAccess")
 public class Lunar extends Gregorian {

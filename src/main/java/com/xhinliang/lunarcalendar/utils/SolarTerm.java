@@ -121,17 +121,19 @@ public final class SolarTerm {
         this.D = d - int2(m * 30.6001);
         y -= 4716;
         m--;
-        if (m > 12)
+        if (m > 12) {
             m -= 12;
-        if (m <= 2)
-            //noinspection UnusedAssignment
-            y++;
+        }
+        if (m <= 2) {
+            ++y;
+        }
     }
 
     private double int2(double v) {
         v = Math.floor(v);
-        if (v < 0)
+        if (v < 0) {
             return v + 1;
+        }
         return v;
     }
 
@@ -141,9 +143,11 @@ public final class SolarTerm {
 
     private double deltaT(double y) {
         int i;
-        for (i = 0; i < 100; i += 5)
-            if (y < dts[i + 5] || i == 95)
+        for (i = 0; i < 100; i += 5) {
+            if (y < dts[i + 5] || i == 95) {
                 break;
+            }
+        }
         double t1 = (y - dts[i]) / (dts[i + 5] - dts[i]) * 10;
         double t2 = t1 * t1;
         double t3 = t2 * t1;
@@ -152,26 +156,33 @@ public final class SolarTerm {
 
     private double angleCal(double t1, double jiao, int lx) {
         double t2 = t1, t = 0, v;
-        if (lx == 0)
+        if (lx == 0) {
             t2 += 360;
-        else
+        } else {
             t2 += 25;
+        }
         jiao *= Math.PI / 180;
         double v1 = jiaoCai(lx, t1, jiao);
         double v2 = jiaoCai(lx, t2, jiao);
-        if (v1 < v2)
+        if (v1 < v2) {
             v2 -= 2 * Math.PI;
+        }
         double k = 1, k2;
         for (int i = 0; i < 10; i++) {
-            k2 = (v2 - v1) / (t2 - t1);
-            if (Math.abs(k2) > 1e-15)
+            {
+                k2 = (v2 - v1) / (t2 - t1);
+            }
+            if (Math.abs(k2) > 1e-15) {
                 k = k2;
+            }
             t = t1 - v1 / k;
             v = jiaoCai(lx, t, jiao);
-            if (v > 1)
+            if (v > 1) {
                 v -= 2 * Math.PI;
-            if (Math.abs(v) < 1e-8)
+            }
+            if (Math.abs(v) < 1e-8) {
                 break;
+            }
             t1 = t2;
             v1 = v2;
             t2 = t;
@@ -219,8 +230,9 @@ public final class SolarTerm {
 
     private double Mnn(double[] f) {
         double v = 0, t1 = MnnT, t2 = t1 * t1, t3 = t2 * t1, t4 = t3 * t1;
-        for (int i = 0; i < f.length; i += 6)
+        for (int i = 0; i < f.length; i += 6) {
             v += f[i] * Math.sin(f[i + 1] + t1 * f[i + 2] + t2 * f[i + 3] + t3 * f[i + 4] + t4 * f[i + 5]);
+        }
         return v;
     }
 
@@ -267,15 +279,17 @@ public final class SolarTerm {
 
     private double rad2mrad(double v) {
         v = v % (2 * Math.PI);
-        if (v < 0)
+        if (v < 0) {
             return v + 2 * Math.PI;
+        }
         return v;
     }
 
     private double Enn(double[] f) {
         double v = 0;
-        for (int i = 0; i < f.length; i += 3)
+        for (int i = 0; i < f.length; i += 3) {
             v += f[i] * Math.cos(f[i + 1] + EnnT * f[i + 2]);
+        }
         return v;
     }
 }

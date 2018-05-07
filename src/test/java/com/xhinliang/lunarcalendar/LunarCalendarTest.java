@@ -1,17 +1,19 @@
 package com.xhinliang.lunarcalendar;
 
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
- * @author xhinliang xhinliang@gmail.com
+ * @author xhinliang
  */
-public class Test {
+public class LunarCalendarTest {
 
-    @org.junit.Before
+    @Before
     public void setUp() {
     }
 
-    @org.junit.Test
+    @Test
     public void testNew() {
         // Basic
         LunarCalendar lunarCalender = LunarCalendar.obtainCalendar(2016, 1, 4);

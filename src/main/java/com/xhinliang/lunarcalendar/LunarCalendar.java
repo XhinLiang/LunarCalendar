@@ -25,8 +25,9 @@ public class LunarCalendar {
     private Lunar lunar;
 
     public Lunar getLunar() {
-        if (lunar == null)
+        if (lunar == null) {
             lunar = DPCNCalendar.getLunar(year, month, day);
+        }
         return lunar;
     }
 
@@ -36,6 +37,14 @@ public class LunarCalendar {
         this.day = day;
     }
 
+    /**
+     * 获取 LunarCalendar 对象
+     *
+     * @param year  公历年
+     * @param month 公立月
+     * @param day   公立日
+     * @return LunarCalender
+     */
     public static LunarCalendar obtainCalendar(int year, int month, int day) {
         return DPCManager.getInstance().getDPInfo(year, month, day);
     }
@@ -141,10 +150,12 @@ public class LunarCalendar {
     }
 
     public String getSubTitle() {
-        if (!festivals.getSet().isEmpty())
+        if (!festivals.getSet().isEmpty()) {
             return festivals.getSet().iterator().next();
-        if (solarTerm != null)
+        }
+        if (solarTerm != null) {
             return solarTerm;
+        }
         return getLunarDay();
     }
 

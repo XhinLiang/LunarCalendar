@@ -1,7 +1,7 @@
 package com.xhinliang.lunarcalendar;
 
 /**
- * @author xhinliang <xhinliang@gmail.com>
+ * @author xhinliang
  */
 public class Main {
 

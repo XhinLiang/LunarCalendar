@@ -13,8 +13,7 @@ import java.util.Set;
  * 中国月历
  * Calendar of China
  *
- * @author AigeStudio 2015-06-16
- * @author XhinLiang 2016-02-06
+ * @author xhinliang
  */
 class DPCNCalendar {
 
@@ -56,7 +55,7 @@ class DPCNCalendar {
             {8, 9, 14, 17, 25},
             {1, 3, 4, 9, 25}};
 
-    //在农历的节日的节点的名字，与下一个二位数组一一对应
+    // 在农历的节日的节点的名字，与下一个二维数组一一对应
     private static final String[][] FESTIVAL_L = {
             {"春节", "元宵"},
             {},
@@ -71,7 +70,7 @@ class DPCNCalendar {
             {},
             {"腊八", "扫房"}};
 
-    //在农历的节日的节点
+    // 在农历的节日的节点
     private static final int[][] FESTIVAL_LUNAR_DATE = {
             {1, 15},
             {},
@@ -132,24 +131,25 @@ class DPCNCalendar {
         Festivals[][] tmp = new Festivals[6][7];
         for (int i = 0; i < tmp.length; i++) {
             for (int j = 0; j < tmp[0].length; j++) {
-                if (gregorianMonth[i][j] == NOT_A_DAY)
+                if (gregorianMonth[i][j] == NOT_A_DAY) {
                     continue;
+                }
                 tmp[i][j] = new Festivals();
                 gregorian.reset(year, month, gregorianMonth[i][j]);
                 Lunar lunar = gregorianToLunar(gregorian);
                 // 农历节日
                 String result = getFestivalLunar(lunar);
-                if (!TextUtils.isEmpty(result)) {
+                if (TextUtils.isNotEmpty(result)) {
                     tmp[i][j].add(result);
                 }
                 // 公立节日
                 result = getFestivalGregorian(gregorian);
-                if (!TextUtils.isEmpty(result)) {
+                if (TextUtils.isNotEmpty(result)) {
                     tmp[i][j].add(result);
                 }
                 // 二十四节气
                 result = getSolarTerm(year, month, gregorian.day);
-                if (!TextUtils.isEmpty(result)) {
+                if (TextUtils.isNotEmpty(result)) {
                     tmp[i][j].add(result);
                 }
             }
@@ -171,17 +171,17 @@ class DPCNCalendar {
         Lunar lunar = gregorianToLunar(gregorian);
         // 农历节日
         String result = getFestivalLunar(lunar);
-        if (!TextUtils.isEmpty(result)) {
+        if (TextUtils.isNotEmpty(result)) {
             festivals.add(result);
         }
         // 公立节日
         result = getFestivalGregorian(gregorian);
-        if (!TextUtils.isEmpty(result)) {
+        if (TextUtils.isNotEmpty(result)) {
             festivals.add(result);
         }
         // 二十四节气
         result = getSolarTerm(year, month, gregorian.day);
-        if (!TextUtils.isEmpty(result)) {
+        if (TextUtils.isNotEmpty(result)) {
             festivals.add(result);
         }
         return festivals;
@@ -219,9 +219,11 @@ class DPCNCalendar {
      */
     private static String getFestivalLunar(Lunar lunar) {
         int[] daysInMonth = FESTIVAL_LUNAR_DATE[lunar.month - 1];
-        for (int i = 0; i < daysInMonth.length; i++)
-            if (lunar.day == daysInMonth[i])
+        for (int i = 0; i < daysInMonth.length; i++) {
+            if (lunar.day == daysInMonth[i]) {
                 return FESTIVAL_L[lunar.month - 1][i];
+            }
+        }
         return null;
     }
 
@@ -233,9 +235,11 @@ class DPCNCalendar {
      */
     private static String getFestivalGregorian(Gregorian gregorian) {
         int[] daysInMonth = FESTIVAL_G_DATE[gregorian.month - 1];
-        for (int i = 0; i < daysInMonth.length; i++)
-            if (gregorian.day == daysInMonth[i])
+        for (int i = 0; i < daysInMonth.length; i++) {
+            if (gregorian.day == daysInMonth[i]) {
                 return FESTIVAL_GREGORIAN[gregorian.month - 1][i];
+            }
+        }
         return null;
     }
 
@@ -267,8 +271,9 @@ class DPCNCalendar {
 
         for (int i = 0; i < 13; i++) {
             int dm = getBitInt(days, 1, 12 - i) == 1 ? 30 : 29;
-            if (offset <= dm)
+            if (offset <= dm) {
                 break;
+            }
             lunarM++;
             offset -= dm;
         }

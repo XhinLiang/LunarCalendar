@@ -1,9 +1,7 @@
 package com.xhinliang.lunarcalendar;
 
 /**
- * Created by io.xhinliang on 16-2-6.
- *
- * @author XhinLiang 2016-02-06
+ * @author xhinliang
  */
 @SuppressWarnings("WeakerAccess")
 public class Gregorian {
@@ -28,8 +26,9 @@ public class Gregorian {
     }
 
     private void checkYear(int year) {
-        if (year < 1900 && year > 2100)
+        if (year < 1900 || year > 2100) {
             throw new RuntimeException("Year should be between 1900 and 2100");
+        }
     }
 
     @Override

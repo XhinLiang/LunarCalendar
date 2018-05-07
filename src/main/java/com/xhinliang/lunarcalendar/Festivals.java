@@ -4,12 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Festivals
- * Created by io.xhinliang on 16-2-6.
- *
- * @author XhinLiang 2016-02-06
+ * @author xhinliang
  */
-
 @SuppressWarnings("WeakerAccess")
 public class Festivals {
     private Set<String> festivals;
@@ -29,7 +25,7 @@ public class Festivals {
     @Override
     public String toString() {
         StringBuilder buffer = new StringBuilder();
-        for (String item :festivals){
+        for (String item : festivals) {
             buffer.append(item);
         }
         return "Festivals{" + buffer.toString() + "}";

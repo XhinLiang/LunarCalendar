@@ -9,16 +9,14 @@ import java.util.Set;
 import java.util.WeakHashMap;
 
 /**
- * 日期管理器
  * The manager of date picker.
  *
- * @author AigeStudio 2015-06-12
- * @author XhinLiang 2016-02-06
+ * @author xhinliang
  */
 class DPCManager {
     private static final Map<Integer, Map<Integer, LunarCalendar[][]>> DATE_CACHE = new WeakHashMap<>();
 
-    private static DPCManager sManager;
+    private static volatile DPCManager sManager;
 
 
     /**
@@ -29,7 +27,11 @@ class DPCManager {
      */
     static DPCManager getInstance() {
         if (null == sManager) {
-            sManager = new DPCManager();
+            synchronized (DPCManager.class) {
+                if (sManager == null) {
+                    sManager = new DPCManager();
+                }
+            }
         }
         return sManager;
     }
@@ -80,7 +82,7 @@ class DPCManager {
                 if (weekends.contains(tmp.getDay())) {
                     tmp.setIsWeekend(true);
                 }
-                if (!TextUtils.isEmpty(strG)) {
+                if (TextUtils.isNotEmpty(strG)) {
                     tmp.setSolarTerm(DPCNCalendar.getSolarTerm(year, month, tmp.getDay()));
                 }
                 info[i][j] = tmp;
@@ -93,8 +95,9 @@ class DPCManager {
         LunarCalendar[][] monthInfo = obtainDPInfo(year, month);
         for (LunarCalendar[] items : monthInfo) {
             for (LunarCalendar item : items) {
-                if (item != null && item.getDay() == day)
+                if (item != null && item.getDay() == day) {
                     return item;
+                }
             }
         }
         throw new RuntimeException("This day is NOT FOUND!");
