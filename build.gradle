@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 group 'xhinliang.com'
-version '3.0'
+version '3.0.2'
 
 buildDir = 'out'
 
