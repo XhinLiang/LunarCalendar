@@ -102,7 +102,7 @@ for (LunarCalendar[] week : month) {
 
 ## More
 - XhinLiang@gmail.com
-- [Blog](http://xhinliang.github.io)
+- [Blog](https://xhinliang.com)
 
 ## Thanks
 - [DatePicker](https://github.com/AigeStudio/DatePicker)
