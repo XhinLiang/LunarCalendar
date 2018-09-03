@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds">
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %level \(%F:%L\) - %msg %n</pattern>
+        </encoder>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <root>
+        <appender-ref ref="stdout"/>
+        <level value="info"/>
+    </root>
+</configuration>
