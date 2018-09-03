@@ -33,7 +33,7 @@ dependencies {
 #### 获取单天
 - **代码**
 ```
-LunarCalendar lunarCalender = LunarCalendar.getInstance(2016, 2, 8);
+LunarCalendar lunarCalender = LunarCalendar.obtainCalendar(2016, 2, 8);
 System.out.println(lunarCalender.getLunar());
 System.out.println(lunarCalender.getFullLunarStr());
 ```
@@ -49,7 +49,7 @@ Lunar{year=2016, month=1, day=1}
 ```
 // LunarCalender[6][7], 表示这个月的星期和星期里的天
 // 就像我们使用的月历一样
-LunarCalendar[][] month = LunarCalendar.getInstanceMonth(2016, 2);
+LunarCalendar[][] month = LunarCalendar.obtainCalendar(2016, 2);
 for (LunarCalendar[] week : month) {
     for (LunarCalendar day : week) {
         if (day == null) {

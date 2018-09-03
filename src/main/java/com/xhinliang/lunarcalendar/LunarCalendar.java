@@ -49,6 +49,18 @@ public class LunarCalendar {
         return DPCManager.getInstance().getDPInfo(year, month, day);
     }
 
+    /**
+     * 获取指定年月的日历对象数组
+     *
+     * @param year  公历年
+     * @param month 公历月
+     * @return 日历对象数组 该数组长度恒为6x7 如果某个下标对应无数据则填充为null
+     */
+    public static LunarCalendar[][] obtainCalendar(int year, int month) {
+        return DPCManager.getInstance().obtainDPInfo(year, month);
+    }
+
+
     void setFestivals(Festivals festivals) {
         this.festivals = festivals;
     }
@@ -83,17 +95,6 @@ public class LunarCalendar {
 
     public long getMillis() {
         return getDate().getTime();
-    }
-
-    /**
-     * 获取指定年月的日历对象数组
-     *
-     * @param year  公历年
-     * @param month 公历月
-     * @return 日历对象数组 该数组长度恒为6x7 如果某个下标对应无数据则填充为null
-     */
-    public static LunarCalendar[][] obtainCalendar(int year, int month) {
-        return DPCManager.getInstance().obtainDPInfo(year, month);
     }
 
     /**

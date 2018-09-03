@@ -31,7 +31,7 @@ dependencies {
 #### obtain single day
 - **Code**
 ```
-LunarCalendar lunarCalender = LunarCalendar.getInstance(2016, 2, 8);
+LunarCalendar lunarCalender = LunarCalendar.obtainCalendar(2016, 2, 8);
 System.out.println(lunarCalender.getLunar());
 System.out.println(lunarCalender.getFullLunarStr());
 ```
@@ -46,7 +46,7 @@ Lunar{year=2016, month=1, day=1}
 ```
 // LunarCalender[6][7], means the weeks of this month and the days of the weeks
 // Just like the calender we use daily.
-LunarCalendar[][] month = LunarCalendar.getInstanceMonth(2016, 2);
+LunarCalendar[][] month = LunarCalendar.obtainCalendar(2016, 2);
 for (LunarCalendar[] week : month) {
     for (LunarCalendar day : week) {
         if (day == null) {
