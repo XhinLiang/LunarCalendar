@@ -1,4 +1,5 @@
 .idea
+.vscode
 *.iml
 *.class
 
@@ -18,4 +19,4 @@ hs_err_pid*
 .settings
 .classpath
 
-.README.md.html 
+.README.md.html

@@ -14,7 +14,7 @@
 ### Gradle
 ```
 dependencies {
-	compile 'com.xhinliang:LunarCalendar:4.0.0-SNAPSHOT'
+    compile 'com.xhinliang:LunarCalendar:4.0.0-SNAPSHOT'
 }
 ```
 ### Maven
