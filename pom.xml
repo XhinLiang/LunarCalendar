@@ -48,7 +48,7 @@
 
         <kotlin.compiler.incremental>false</kotlin.compiler.incremental>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-        <kotlin.version>1.2.51</kotlin.version>
+        <kotlin.version>1.2.30</kotlin.version>
     </properties>
 
     <dependencies>
