@@ -23,7 +23,7 @@ dependencies {
 <dependency>
     <groupId>com.xhinliang</groupId>
     <artifactId>LunarCalendar</artifactId>
-    <version>4.0.4</version>
+    <version>4.0.7</version>
 </dependency>
 ```
 
