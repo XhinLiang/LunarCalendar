@@ -14,7 +14,7 @@ public class Main {
 
         // Month of Gregorian
         println("Month of Gregorian");
-        LunarCalendar[][] month = LunarCalendar.obtainCalendar(2016, 2);
+        LunarCalendar[][] month = LunarCalendar.obtainCalendar(2020, 1);
         for (LunarCalendar[] weeks : month) {
             for (LunarCalendar day : weeks) {
                 if (day == null) {
