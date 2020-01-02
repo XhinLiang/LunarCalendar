@@ -68,7 +68,7 @@ class DPCNCalendar {
             {"重阳"},
             {},
             {},
-            {"腊八", "扫房"}};
+            {"腊八", "扫房", "除夕"}};
 
     // 在农历的节日的节点
     private static final int[][] FESTIVAL_LUNAR_DATE = {
@@ -83,7 +83,7 @@ class DPCNCalendar {
             {9},
             {},
             {},
-            {8, 24}};
+            {8, 24, 30}};
 
     private static final String[][] SOLAR_TERM = {
             {"小寒", "大寒"},
