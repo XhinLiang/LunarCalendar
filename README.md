@@ -14,7 +14,7 @@
 ### Gradle
 ```
 dependencies {
-    compile 'com.xhinliang:LunarCalendar:4.0.6'
+    compile 'com.xhinliang:LunarCalendar:4.0.7'
 }
 ```
 ### Maven
@@ -22,7 +22,7 @@ dependencies {
 <dependency>
     <groupId>com.xhinliang</groupId>
     <artifactId>LunarCalendar</artifactId>
-    <version>4.0.6</version>
+    <version>4.0.7</version>
 </dependency>
 ```
 
