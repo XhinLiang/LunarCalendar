@@ -1,4 +1,5 @@
 # LunarCalendar
+[![CI](https://github.com/XhinLiang/LunarCalendar/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/XhinLiang/LunarCalendar/actions/workflows/ci.yml)
 [![Release](https://jitpack.io/v/XhinLiang/LunarCalendar.svg)](https://jitpack.io/#XhinLiang/LunarCalendar)
 [![Release](https://img.shields.io/github/release/XhinLiang/LunarCalendar.svg)](https://jitpack.io/#XhinLiang/LunarCalendar)
 
@@ -72,6 +73,14 @@ for (LunarCalendar[] week : month) {
 - View the sample in **Main**
 - View the doc in **root**
 
+## Development
+- Requirements: JDK 8+ and Maven 3.6+
+- Run local quality checks:
+```
+mvn -B -ntp clean verify
+```
+- CI runs the same command on GitHub Actions for pushes and pull requests.
+
 ## More
 - XhinLiang@gmail.com
 - [Blog](https://xhinliang.com)
@@ -95,5 +104,4 @@ for (LunarCalendar[] week : month) {
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
 
