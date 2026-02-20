@@ -1,4 +1,5 @@
 # LunarCalendar
+[![CI](https://github.com/XhinLiang/LunarCalendar/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/XhinLiang/LunarCalendar/actions/workflows/ci.yml)
 [![Jitpack](https://jitpack.io/v/XhinLiang/LunarCalendar.svg)](https://jitpack.io/#XhinLiang/LunarCalendar)
 [![Release](https://img.shields.io/github/release/XhinLiang/LunarCalendar.svg)](https://jitpack.io/#XhinLiang/LunarCalendar)
 
@@ -75,6 +76,14 @@ Month of Lunar
 - 在 **Main** 中找到示例代码
 - 在 **根目录** 找到 **JavaDoc**
 
+## 开发
+- 环境要求：JDK 8+，Maven 3.6+
+- 本地质量检查：
+```
+mvn -B -ntp clean verify
+```
+- GitHub Actions 会在 push 和 pull request 中执行同样的命令。
+
 ## 更多
 - XhinLiang@gmail.com
 - [Blog](http://xhinliang.github.io)
@@ -98,5 +107,4 @@ Month of Lunar
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
 
